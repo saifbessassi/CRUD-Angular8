@@ -18,7 +18,7 @@ export class UserComponent implements OnInit {
     this.getUser(this.id);
   }
 
-    async getUser (id) {
+  async getUser (id) {
     this.userService.getUser(id)
     .subscribe((data) => {
       this.user = data;

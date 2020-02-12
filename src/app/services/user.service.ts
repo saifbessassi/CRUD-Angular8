@@ -23,12 +23,12 @@ export class UserService {
   addUser (user: User) {
     return this.http.post<User>(API_URL + '/user', JSON.stringify(user), httpOptions);
   }
-  getUsers () {
-    return this.http.get<JSON>(API_URL);
+  getAllUser () {
+    return this.http.get<User[]>(API_URL);
   }
 
   getUser (id) {
-    return this.http.get<JSON>(API_URL + '/user/' + id);
+    return this.http.get<User>(API_URL + '/user/' + id);
   }
 
   editUser (user: User) {

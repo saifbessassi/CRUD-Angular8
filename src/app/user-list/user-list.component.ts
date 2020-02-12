@@ -13,10 +13,11 @@ export class UserListComponent implements OnInit {
   users = [];
   errorMessage: string;
 
+
   constructor(private userService: UserService, private http: HttpClient) { }
 
   ngOnInit() {
-    this.userService.getUsers()
+    this.userService.getAllUser()
     .subscribe(
       (response: any) => {
         this.users = response;
@@ -24,13 +25,14 @@ export class UserListComponent implements OnInit {
     );
   }
 
-  deleteUser (id, index) {
+  deleteUser (id, index) { 
     this.userService.deleteUser(id)
     .subscribe(
       (response: any) => {
         this.users.splice(index,1);
       }
-    );;
+    );
+    
   }
 
 

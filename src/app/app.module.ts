@@ -11,7 +11,6 @@ import { UserComponent } from './user/user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UserEditFormComponent } from './user-edit-form/user-edit-form.component';
 import { SlimLoadingBarModule } from 'ng2-slim-loading-bar';
-import { NgHttpLoaderModule } from 'ng-http-loader';
 
 @NgModule({
   declarations: [
@@ -28,8 +27,7 @@ import { NgHttpLoaderModule } from 'ng-http-loader';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SlimLoadingBarModule,
-    NgHttpLoaderModule.forRoot()
+    SlimLoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
